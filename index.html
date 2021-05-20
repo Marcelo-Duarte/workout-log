@@ -2,29 +2,28 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./assets/style.css">
         <title>Workout Log</title>
     </head>
     <body>
-        <div class="app">
+        <div id="app">
             <h1>Workout Log</h1>
             <div class="form-area">
                 <form class="form">
-                    <input type="number" placeholder="Time spent">
-                    <select>
+                    <input type="number" placeholder="Time spent" data-form-time_spent>
+                    <select data-form-activity>
                         <option value="run">Run</option>
                         <option value="swimming">Swimming</option>
                         <option value="bike">Bike</option>
                     </select>
-                    <input type="date">
-                    <button type="submit">Add</button>
+                    <input type="date" data-form-date>
+                    <button type="submit" data-form-button>Add</button>
                 </form>
-                
             </div>
-            <div class="workout-table">
-                <ul class="workout-list"></ul>
+            <div class="table">
+                <ul class="list" data-list></ul>
             </div>
         </div>
-        <script src="./main.js"></script>
+        <script type="module" src="./main.js"></script>
     </body>
 </html>
