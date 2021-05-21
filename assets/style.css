@@ -1,32 +1,100 @@
-#app {
-    text-align: center;
+header {
+    background-color: #2F4F4F;
+    margin-bottom: 10px;
     width: 100%;
-    height: 1000px;
+    text-align: center;
+    color: white;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px;
 }
 
 .form-area {
-    text-align: center;
-    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     background-color: #2F4F4F;
     border-radius: 10px;
+    width: 30%;
+    min-width: 475px;
+    height: 35px;
 }
 
-.table {
+.table-area {
+    display: flex;
+    flex-direction: column;
     margin-top: 10px;
     min-height: 20%;
     width: 30%;
+    min-width: 475px;
     background-color: #2F4F4F;
     border-radius: 10px;
     padding: 10px;
 }
 
-.list {
+.table {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
-    text-align: center;
     padding-inline-start: 0px;
+    border-collapse: collapse;
 }
 
-.list-item {
+.table-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     background-color: white;
+    height: max-content;
+    margin-bottom: 10PX;
+}
+
+.table-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    height: max-content;
+}
+
+.table-item:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.table-item:hover {
+    background-color: bisque;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    border-width: 100%;
+    text-align: left;
+    padding: 8px;
+}
+
+.form-input {
+    height: 20px;
+}
+
+.add-button {
+    background-color: #ADFF2F;
+    height: 25px;
+    border: 0px;
+    font-weight: bold;
+}
+
+.remove-button {
+    background-color: #F08080;
+    height: 100%;
+    width: 40px;
+    font-weight: bold;
 }

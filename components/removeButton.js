@@ -1,7 +1,7 @@
 const removeButton = () => {
     const button = document.createElement('button');
     button.classList.add('remove-button');
-    button.innerText = 'Remover';
+    button.innerText = 'X';
     button.addEventListener('click', removeElement);
 
     return button;
