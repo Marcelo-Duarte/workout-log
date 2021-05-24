@@ -12,18 +12,16 @@
                 <h1>Workout Log</h1>
             </header>
 
-            <div class="form-area">
-                <form class="form">
-                    <input class="form-input" id="form-time_spent" type="number" placeholder="Time spent">
-                    <select class="form-input" id="form-activity">
-                        <option value="run">Run</option>
-                        <option value="swimming">Swimming</option>
-                        <option value="bike">Bike</option>
-                    </select>
-                    <input class="form-input" id="form-date" type="date">
-                    <button type="submit" id="form-button" class="add-button">+</button>
-                </form>
-            </div>
+            <form class="form-area">
+                <input class="form-input" id="form-time-spent" type="number" placeholder="Time spent">
+                <select class="form-input" id="form-activity">
+                    <option value="run">Run</option>
+                    <option value="swimming">Swimming</option>
+                    <option value="bike">Bike</option>
+                </select>
+                <input class="form-input" id="form-date" type="date">
+                <button type="submit" id="form-button" class="add-button">+</button>
+            </form>
 
             <div class="table-area">
                 <table class="table" id="workout-table">
@@ -31,9 +29,13 @@
                         <th>DATE</th>
                         <th>ACTIVITY</th>
                         <th>SPENT TIME</th>
-                        <th></th>
                     </tr>
                 </table>
+            </div>
+
+            <div class="counter-area">
+                <span>Total Spent Time: </span>
+                <span id="counter"></span>
             </div>
         </div>
         <script type="module" src="./main.js"></script>

@@ -17,14 +17,11 @@ header {
 .form-area {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
+    justify-content: space-between;
     background-color: #2F4F4F;
-    border-radius: 10px;
     width: 30%;
-    min-width: 475px;
-    height: 35px;
+    min-width: 569px;
+    height: 40px;
 }
 
 .table-area {
@@ -60,8 +57,8 @@ header {
 .table-item {
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     background-color: white;
     height: max-content;
 }
@@ -78,16 +75,18 @@ td, th {
     border: 1px solid #dddddd;
     border-width: 100%;
     text-align: left;
-    padding: 8px;
+    height: 100%;
+    width: 100%;
 }
 
 .form-input {
-    height: 20px;
+    margin: 10px;
 }
 
 .add-button {
     background-color: #ADFF2F;
-    height: 25px;
+    height: 100%;
+    width: 40px;
     border: 0px;
     font-weight: bold;
 }
