@@ -5,37 +5,45 @@ const workoutTable = (event) => {
 
     const table = document.querySelector('#workout-table');
 
-    const dataSet = dataHandle();
-
     const tableRow = document.createElement('tr');
     tableRow.classList.add('table-item');
 
-    const timeSpentData = document.createElement('td');
-    const activityData = document.createElement('td');
-    const dateData = document.createElement('td');
+    getData().forEach(data => {
+        const tableData = document.createElement('td');
 
-    timeSpentData.innerHTML = dataSet[0].value;
-    tableRow.appendChild(timeSpentData);
+        tableData.innerHTML = data;
 
-    activityData.innerHTML = dataSet[1].value;
-    tableRow.appendChild(activityData);
-
-    dateData.innerHTML = dataSet[2].value;
-    tableRow.appendChild(dateData);
+        tableRow.appendChild(tableData);
+    });
 
     tableRow.appendChild(removeButton());
 
     table.appendChild(tableRow);
 }
 
-const dataHandle = () => {
-    const date = document.querySelector('#form-date');
-    const activity = document.querySelector('#form-activity');
-    const timeSpent = document.querySelector('#form-time_spent');
+const getData = () => {
+    const fields = [
+        {
+            id: 'form-time-spent',
+            name: 'time-spent'
+        },
+        {
+            id: 'form-activity',
+            name: 'activity'
+        },
+        {
+            id: 'form-date',
+            name: 'date'
+        }
+    ];
 
-    const dataSet = [date, activity, timeSpent];
+    var data = [];
 
-    return dataSet;
+    fields.forEach(field => {
+        data.push(document.querySelector(`#${field.id}`).value);
+    });
+
+    return data;
 }
 
 export default workoutTable;
