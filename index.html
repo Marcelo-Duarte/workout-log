@@ -2,29 +2,40 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="./assets/style.css">
         <title>Workout Log</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Workout Log</h1>
+        <div id="app">
+
+            <header>
+                <h1>Workout Log</h1>
+            </header>
+
             <div class="form-area">
                 <form class="form">
-                    <input type="number" placeholder="Time spent">
-                    <select>
+                    <input class="form-input" id="form-time_spent" type="number" placeholder="Time spent">
+                    <select class="form-input" id="form-activity">
                         <option value="run">Run</option>
                         <option value="swimming">Swimming</option>
                         <option value="bike">Bike</option>
                     </select>
-                    <input type="date">
-                    <button type="submit">Add</button>
+                    <input class="form-input" id="form-date" type="date">
+                    <button type="submit" id="form-button" class="add-button">+</button>
                 </form>
-                
             </div>
-            <div class="workout-table">
-                <ul class="workout-list"></ul>
+
+            <div class="table-area">
+                <table class="table" id="workout-table">
+                    <tr class="table-header">
+                        <th>DATE</th>
+                        <th>ACTIVITY</th>
+                        <th>SPENT TIME</th>
+                        <th></th>
+                    </tr>
+                </table>
             </div>
         </div>
-        <script src="./main.js"></script>
+        <script type="module" src="./main.js"></script>
     </body>
 </html>
